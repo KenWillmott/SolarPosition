@@ -53,7 +53,23 @@ struct SolarPosition_t
 };
 ```
 
+Once you declare a SolarPosition_t object, like this:
+
+    SolarPosition_t somePosition;
+    
+you can assign sun position data to it, including the time associated with the position,
+by using the method that returns an aggregate position like this:
+
+    somePosition = someLocation.getSolarPosition();
+
+This is only necessary if you wish to store the results - if not, you can access members
+directly, like this:
+
+    azimuthVariable = someLocation.getSolarPosition().azimuth;
+
 All parameters of a position object are calculated at the same time. 
 Before any solar calculation is performed internally, a check is made to see if the time has changed from the
 previous calculation. If the results are available from the previous calculation, they will be used instead
 of performing the calculations again. This avoids wasting time in redundant calculations.
+
+
