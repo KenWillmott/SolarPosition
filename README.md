@@ -92,3 +92,29 @@ the workings of this library.
 All methods in this library use a time_t type time for calculations. If the parameter is not passed, then
 the time source that has been specified by the setTimeProvider() method will be used. This makes it
 easy to work with either real time, or arbitrary past or future times.
+
+# Public Methods
+
+Constructor:
+    SolarPosition(float Latitude, float Longitude);
+create a location given Latitude and Longitude in decimal degrees
+
+setTimeProvider(<time provider function pointer>)
+    static void setTimeProvider(getExternalTime getTimeFunction);
+
+    SolarPosition_t getSolarPosition();
+    SolarPosition_t getSolarPosition(time_t t);
+return a complete solar position structure
+See the description of struct SolarPosition_t for information about the data members
+
+    float getSolarElevation();
+    float getSolarElevation(time_t t);
+return solar elevation in decimal degrees
+
+    float getSolarAzimuth();
+    float getSolarAzimuth(time_t t);
+return solar azimuth in decimal degrees
+
+    float getSolarDistance();
+    float getSolarDistance(time_t t);
+return solar distance (from center of the earth to the sun) in kilometers
