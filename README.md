@@ -38,7 +38,7 @@ For example:
 
     SolarPosition::setTimeProvider(RTC.get);
 
-# Data
+# Data Structure
 
 If you want to store solar positions as aggregate data (i.e. as a whole), you should use
 the struct datatype that is provided for that purpose:
@@ -62,7 +62,13 @@ by using the method that returns an aggregate position like this:
 
     somePosition = someLocation.getSolarPosition();
 
-This is only necessary if you wish to store the results - if not, you can access members
+Subsequently, you can access a member variable like this:
+
+    azimuthVariable = somePosition.azimuth;
+
+# Accessing Data Directly
+
+The above data structure is only necessary if you wish to store the results - if not, you can access members
 directly, like this:
 
     azimuthVariable = someLocation.getSolarPosition().azimuth;
