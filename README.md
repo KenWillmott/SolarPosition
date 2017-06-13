@@ -22,3 +22,9 @@ which provides convenient constants definitions and functions
 which are not only useful in simplifying the library code, but can be used in the user program
 to manipulate and display the time values associated with the solar locations.
 
+# Usage
+
+Include the library:
+
+#include <SolarPosition.h>
+
