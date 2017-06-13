@@ -15,9 +15,9 @@ typedef time_t(*getExternalTime)();
 
 struct SolarPosition_t
 {
-  float elevation;
-  float azimuth;
-  float distance;
+  float elevation = 0;
+  float azimuth = 0;
+  float distance = 0;
   time_t time = 0;
 };
 
