@@ -27,6 +27,7 @@ to manipulate and display the time values associated with the solar locations.
 First ensure that the Time library is correctly installed.
 
 Include this library:
+
     #include <SolarPosition.h>
 
 In the setup() function, set the time provider if you are using the real time methods:
@@ -34,5 +35,6 @@ In the setup() function, set the time provider if you are using the real time me
     SolarPosition::setTimeProvider(<name of time provider>);
 
 For example:
+
     SolarPosition::setTimeProvider(RTC.get);
 
