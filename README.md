@@ -17,7 +17,8 @@ This adaptation introduces an object oriented interface, and a method of synchro
 to a time source in a standard UNIX epoch format. Thus it is easily usable with any Arduino user
 program.
 
-It relies on the Time library, which provides convenient constants definitions and functions
+It relies on the Time library, https://github.com/PaulStoffregen/Time
+which provides convenient constants definitions and functions
 which are not only useful in simplifying the library code, but can be used in the user program
 to manipulate and display the time values associated with the solar locations.
 
