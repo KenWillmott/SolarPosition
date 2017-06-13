@@ -82,4 +82,13 @@ Before any solar calculation is performed internally, a check is made to see if 
 previous calculation. If the results are available from the previous calculation, they will be used instead
 of performing the calculations again. This avoids wasting time in redundant calculations.
 
+# Time parameter
 
+The mathematical formulas in the library base all calculations on UTC time (otherwise known as GMT).
+Therefore, all times must be in UTC, and any time provider sources such as RTC ICs must be configured
+to provide UTC time. If local time is needed, it is recommended to perform a conversion separately from
+the workings of this library.
+
+All methods in this library use a time_t type time for calculations. If the parameter is not passed, then
+the time source that has been specified by the setTimeProvider() method will be used. This makes it
+easy to work with either real time, or arbitrary past or future times.
