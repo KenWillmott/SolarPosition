@@ -30,6 +30,7 @@ Include this library:
 `#include <SolarPosition.h>`
 
 In the setup() function, set the time provider if you are using the real time methods:
+
 `SolarPosition::setTimeProvider(<name of time provider>);`
 
 For example:
