@@ -95,9 +95,9 @@ easy to work with either real time, or arbitrary past or future times.
 
 # Public Methods
 
-<H1>Constructor:
+<H1>Constructor:</H1>
 
-    SolarPosition(float Latitude, float Longitude);</H1>
+    SolarPosition(float Latitude, float Longitude);
 create a location given Latitude and Longitude in decimal degrees
 
 <H1>::setTimeProvider(<time provider function pointer>)</H1>
