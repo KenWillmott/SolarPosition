@@ -1,9 +1,9 @@
-// solarTimeDemo
+// solarTimeNoClockDemo
 
 // Arduino example sketch for SolarPosition library
 //
 // Calculate solar position from time and location information
-// using Time library functions (relying on CPU clock based timer) to keep time.
+// not using any clock to keep time. Just do calculations.
 
 // 2017 Ken Willmott
 // Arduino library based on the program "Arduino Uno and Solar Position Calculations"
@@ -18,10 +18,7 @@
 const uint8_t digits = 3;
 
 // some test positions:
-SolarPosition Toronto(43.6777, -79.6248);  // Toronto, Canada airport (YYZ)
 SolarPosition Timbuktu(16.775214, -3.007455); // Timbuktu, Mali, Africa
-SolarPosition Melbourne(-37.668987, 144.841006); //Melbourne Airport (MEL)
-SolarPosition Ulaanbaatar(47.847410, 106.769004); //Ulaanbaatar Airport (ULN)
 
 // A solar position structure to demonstrate storing complete positions
 SolarPosition_t savedPosition;
@@ -43,23 +40,12 @@ void setup()
   Serial.begin(9600);
   Serial.println(F("\tSolar Position Demo"));
 
-  // set Time clock to Jan. 1, 2000
-  setTime(SECS_YR_2000);
-  Serial.print(F("Setting clock to "));
-  printTime(SECS_YR_2000);
-
-  // set the Time library time service as the time provider
-  SolarPosition::setTimeProvider(now);
-
-  // save a complete current position
-  savedPosition = Ulaanbaatar.getSolarPosition();
-
   // First test the fixed time methods:
   //
   Serial.print(F("The sun was at an elevation of "));
-  Serial.print(Timbuktu.getSolarPosition(someEpochTime).elevation, 4);
+  Serial.print(Timbuktu.getSolarElevation(someEpochTime), 4);
   Serial.print(F(" and an azimuth of "));
-  Serial.println(Timbuktu.getSolarPosition(someEpochTime).azimuth, 4);
+  Serial.println(Timbuktu.getSolarAzimuth(someEpochTime), 4);
   Serial.print(F("in Timbuktu at "));
   printTime(someEpochTime);
 
@@ -68,29 +54,12 @@ void setup()
   Serial.println(F(" km from the Sun."));
   Serial.println();
 
-  Serial.println(F("Real time sun position reports follow..."));
+  Serial.println(F("Done..."));
   Serial.println();
 }
 
 void loop()
 {
-  // now test the real (synchronized) time methods:
-  //
-  printTime(Toronto.getSolarPosition().time);
-  Serial.print(F("Toronto:\t"));
-  printSolarPosition(Toronto.getSolarPosition(), digits);
-  Serial.print(F("Melbourne:\t"));
-  printSolarPosition(Melbourne.getSolarPosition(), digits);
-  Serial.print(F("Timbuktu:\t"));
-  printSolarPosition(Timbuktu.getSolarPosition(), digits);
-  Serial.print(F("Ulaanbaatar:\t"));
-  printSolarPosition(Ulaanbaatar.getSolarPosition(), digits);
-  Serial.println();
-  Serial.print(F("Ulaanb. Saved:\t"));
-  printSolarPosition(savedPosition, digits);
-  Serial.println();
-
-  delay(15000);
 }
 
 // Print a solar position to serial
