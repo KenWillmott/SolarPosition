@@ -129,7 +129,7 @@ float SolarPosition::getSolarDistance()
 float SolarPosition::getSolarDistance(time_t t)
 {
   calculateSolarPosition(t);
-  return solarDistance;
+  return solarDistance * KM_PER_AU;
 }
 
 //
