@@ -38,3 +38,22 @@ For example:
 
     SolarPosition::setTimeProvider(RTC.get);
 
+# Data
+
+If you want to store solar positions as aggregate data (i.e. as a whole), you should use
+the struct datatype that is provided for that purpose:
+
+```
+struct SolarPosition_t
+{
+  float elevation = 0;
+  float azimuth = 0;
+  float distance = 0;
+  time_t time = 0;
+};
+```
+
+All parameters of a position object are calculated at the same time. 
+Before any solar calculation is performed internally, a check is made to see if the time has changed from the
+previous calculation. If the results are available from the previous calculation, they will be used instead
+of performing the calculations again. This avoids wasting time in redundant calculations.
