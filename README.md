@@ -97,33 +97,33 @@ easy to work with either real time, or arbitrary past or future times.
 
 <H1>Constructor:
 
-    SolarPosition(float Latitude, float Longitude);
+    SolarPosition(float Latitude, float Longitude);</H1>
 create a location given Latitude and Longitude in decimal degrees
 
-<H1>::setTimeProvider(<time provider function pointer>)
+<H1>::setTimeProvider(<time provider function pointer>)</H1>
 
     static void setTimeProvider(getExternalTime getTimeFunction);
 
-<H1>getSolarPosition()
+<H1>getSolarPosition()</H1>
 
     SolarPosition_t getSolarPosition();
     SolarPosition_t getSolarPosition(time_t t);
 return a complete solar position structure
 See the description of struct SolarPosition_t for information about the data members
 
-<H1>getSolarElevation()
+<H1>getSolarElevation()</H1>
 
     float getSolarElevation();
     float getSolarElevation(time_t t);
 return solar elevation in decimal degrees
 
-<H1>getSolarAzimuth()
+<H1>getSolarAzimuth()</H1>
 
     float getSolarAzimuth();
     float getSolarAzimuth(time_t t);
 return solar azimuth in decimal degrees
 
-<H1>getSolarDistance()
+<H1>getSolarDistance()</H1>
 
     float getSolarDistance();
     float getSolarDistance(time_t t);
