@@ -67,6 +67,10 @@ directly, like this:
 
     azimuthVariable = someLocation.getSolarPosition().azimuth;
 
+However, direct methods are provided for those members so the above can be stated more simply:
+
+    azimuthVariable = someLocation.getAzimuth();
+
 All parameters of a position object are calculated at the same time. 
 Before any solar calculation is performed internally, a check is made to see if the time has changed from the
 previous calculation. If the results are available from the previous calculation, they will be used instead
