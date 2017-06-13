@@ -96,10 +96,12 @@ easy to work with either real time, or arbitrary past or future times.
 # Public Methods
 
 Constructor:
+
     SolarPosition(float Latitude, float Longitude);
 create a location given Latitude and Longitude in decimal degrees
 
 setTimeProvider(<time provider function pointer>)
+
     static void setTimeProvider(getExternalTime getTimeFunction);
 
     SolarPosition_t getSolarPosition();
