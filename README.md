@@ -38,7 +38,7 @@ For example:
 
     SolarPosition::setTimeProvider(RTC.get);
 
-# Data Structure
+# Data Storage
 
 If you want to store solar positions as aggregate data (i.e. as a whole), you should use
 the struct datatype that is provided for that purpose:
@@ -93,12 +93,14 @@ All methods in this library use a time_t type time for calculations. If the para
 the time source that has been specified by the setTimeProvider() method will be used. This makes it
 easy to work with either real time, or arbitrary past or future times.
 
-# Public Methods
+# Constructor
 
-<H1>Constructor:</H1>
+<H1>SolarPosition(Latitude, Longitude)</H1>
 
     SolarPosition(float Latitude, float Longitude);
 create a location given Latitude and Longitude in decimal degrees
+
+# Public Methods
 
 <H1>::setTimeProvider(<time provider function pointer>)</H1>
 
