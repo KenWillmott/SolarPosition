@@ -65,6 +65,9 @@ by using the method that returns an aggregate position like this:
 Subsequently, you can access a member variable like this:
 
     azimuthVariable = somePosition.azimuth;
+    
+This is a convenient way to ensure that all the variables were created at the same time, if that
+is important for the application.
 
 # Accessing Data Directly
 
