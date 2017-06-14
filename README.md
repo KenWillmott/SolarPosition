@@ -96,6 +96,13 @@ All methods in this library use a time_t type time for calculations. If the para
 the time source that has been specified by the setTimeProvider() method will be used. This makes it
 easy to work with either real time, or arbitrary past or future times.
 
+If the real time methods are called, a time provider function must first be selected once with the
+setTimeProvider() method. The time provider is shared between all objects. Failing to do so will not
+crash the program, but invalid results will be returned. Once it is set, methods that take no
+time value as a parameter, will automatically get the time from the time provider. In this case,
+The methods return real time values. It is not necessary to use a time provider if the fixed
+time methods are called, since the time parameter is passed to them explicitly.
+
 # Constructor
 
 <H1>SolarPosition(Latitude, Longitude)</H1>
