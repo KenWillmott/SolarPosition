@@ -100,7 +100,7 @@ If the real time methods are called, a time provider function must first be sele
 setTimeProvider() method. The time provider is shared between all objects. Failing to do so will not
 crash the program, but invalid results will be returned. Once it is set, methods that take no
 time value as a parameter, will automatically get the time from the time provider. In this case,
-The methods return real time values. It is not necessary to use a time provider if the fixed
+the methods return real time values. It is not necessary to use a time provider if the fixed
 time methods are called, since the time parameter is passed to them explicitly.
 
 # Constructor
