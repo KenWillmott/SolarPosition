@@ -105,37 +105,37 @@ time methods are called, since the time parameter is passed to them explicitly.
 
 # Constructor
 
-<H1>SolarPosition(Latitude, Longitude)</H1>
+<H2>SolarPosition(Latitude, Longitude)</H2>
 
     SolarPosition(float Latitude, float Longitude);
 create a location given Latitude and Longitude in decimal degrees
 
 # Public Methods
 
-<H1>::setTimeProvider(<time provider function pointer>)</H1>
+<H2>::setTimeProvider(<time provider function pointer>)</H2>
 
     static void setTimeProvider(getExternalTime getTimeFunction);
 
-<H1>getSolarPosition()</H1>
+<H2>getSolarPosition()</H2>
 
     SolarPosition_t getSolarPosition();
     SolarPosition_t getSolarPosition(time_t t);
 return a complete solar position structure
 See the description of struct SolarPosition_t for information about the data members
 
-<H1>getSolarElevation()</H1>
+<H2>getSolarElevation()</H2>
 
     float getSolarElevation();
     float getSolarElevation(time_t t);
 return solar elevation in decimal degrees
 
-<H1>getSolarAzimuth()</H1>
+<H2>getSolarAzimuth()</H2>
 
     float getSolarAzimuth();
     float getSolarAzimuth(time_t t);
 return solar azimuth in decimal degrees
 
-<H1>getSolarDistance()</H1>
+<H2>getSolarDistance()</H2>
 
     float getSolarDistance();
     float getSolarDistance(time_t t);
