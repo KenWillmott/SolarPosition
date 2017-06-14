@@ -19,9 +19,6 @@ const uint8_t digits = 3;
 // some test positions:
 SolarPosition Timbuktu(16.775214, -3.007455); // Timbuktu, Mali, Africa
 
-// A solar position structure to demonstrate storing complete positions
-SolarPosition_t savedPosition;
-
 // create a fixed UNIX time to test fixed time method
 int someS = 0;  //second
 int someM = 0;  //minute
