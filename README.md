@@ -112,7 +112,7 @@ create a location given Latitude and Longitude in decimal degrees
 
 # Public Methods
 
-<H2>::setTimeProvider(<time provider function pointer>)</H2>
+<H2>SolarPosition::setTimeProvider(<time provider function pointer>)</H2>
 
     static void setTimeProvider(getExternalTime getTimeFunction);
 
