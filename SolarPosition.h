@@ -1,18 +1,19 @@
 // SolarPosition.h
 
-// 2017 Ken Willmott
+// 2019 Ken Willmott
 // Arduino library based on the program "Arduino Uno and Solar Position Calculations"
 // (c) David R. Brooks, which can be found at http://www.instesre.org/ArduinoDocuments.htm
 // and issued under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License:
 // https://creativecommons.org/licenses/by-nc-nd/4.0/
 
 #include <TimeLib.h>            //https://github.com/PaulStoffregen/Time
-#include <Arduino.h>
+#include <arduino.h>
 
 const float KM_PER_AU = 149597870.7;  //kilometers per astronomical unit
 
 typedef time_t(*getExternalTime)();
 
+// data structure to store solar position results
 struct SolarPosition_t
 {
   float elevation = 0;
@@ -21,24 +22,23 @@ struct SolarPosition_t
   time_t time = 0;
 };
 
+// utility functions
+long JulianDate(int year, int month, int day);
+SolarPosition_t calculateSolarPosition(time_t tParam, float Latitude, float Longitude);
+
+// class interface
 class SolarPosition
 {
   private:
 
     static getExternalTime getExtTimePtr;  // shared pointer to external sync function
-    time_t timeCalculated = 0;
 
     // current values:
     float Latitude;
     float Longitude;
 
     // results:
-    float Elevation; // in radians
-    float Azimuth; // in radians
-    float solarDistance;  // in AU
-
-    long JulianDate(int year, int month, int day);
-    void calculateSolarPosition(time_t tParam);
+    SolarPosition_t result;
 
   public:
 
@@ -58,4 +58,3 @@ class SolarPosition
     float getSolarDistance();
     float getSolarDistance(time_t t);
 };
-
