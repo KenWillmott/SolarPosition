@@ -6,10 +6,7 @@
 // to calculate solar positions. Note that the function units are radians and AU (astronomical units),
 // unlike the SolarPosition class which automatically converts those to degrees and kilometers.
 
-// Calculate solar position from time and location information
-// using Time library functions (relying on CPU clock based timer) to keep time.
-
-// 2017 Ken Willmott
+// 2019 Ken Willmott
 // Arduino library based on the program "Arduino Uno and Solar Position Calculations"
 // (c) David R. Brooks, which can be found at http://www.instesre.org/ArduinoDocuments.htm
 // and issued under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License:
