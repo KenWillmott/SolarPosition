@@ -87,7 +87,7 @@ of performing the calculations again. This avoids wasting time in redundant calc
 
 # Utility Function
 
-In case the geographical locations will be assigned dynamically, or radians are preferred as an angular unit, or for any other reason the SolarPosition class is not required, direct access to the utility function calculateSolarPosition() that calculates solar position is permitted. See the example sketch solarTimeFunctionDemo for details.
+In case the geographical locations will be assigned dynamically, or radians are preferred as an angular unit, or for any other reason the SolarPosition class is not preferred, direct access to the utility function calculateSolarPosition() that calculates solar position is permitted. See the example sketch solarTimeFunctionDemo for details.
 
 # Time parameter
 
