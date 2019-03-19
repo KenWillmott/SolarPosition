@@ -88,7 +88,6 @@ of performing the calculations again. This avoids wasting time in redundant calc
 # Utility Function
 
 In case the geographical locations will be assigned dynamically or radians are preferred as an angular unit, or for any other reason the SolarPosition class is not preferred, direct access to the utility function calculateSolarPosition() is permitted. See the example sketch solarTimeFunctionDemo for details.
-    SolarPosition_t getSolarPosition();
 
 # Time parameter
 
