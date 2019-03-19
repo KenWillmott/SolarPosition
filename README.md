@@ -85,6 +85,10 @@ Before any solar calculation is performed internally, a check is made to see if 
 previous calculation. If the results are available from the previous calculation, they will be used instead
 of performing the calculations again. This avoids wasting time in redundant calculations.
 
+# Utility Function
+
+In case the geographical locations will be assigned dynamically, or radians are preferred as an angular unit, or for any other reason the SolarPosition class is not required, access to the utility function that calculates solar position is provided. See the example sketch solarTimeFunctionDemo for details.
+
 # Time parameter
 
 The mathematical formulas in the library base all calculations on UTC time (otherwise known as GMT).
