@@ -7,7 +7,7 @@
 // https://creativecommons.org/licenses/by-nc-nd/4.0/
 
 #include <TimeLib.h>            //https://github.com/PaulStoffregen/Time
-#include <arduino.h>
+#include <Arduino.h>
 
 const float KM_PER_AU = 149597870.7;  //kilometers per astronomical unit
 
