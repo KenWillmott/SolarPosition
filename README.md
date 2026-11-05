@@ -13,6 +13,9 @@ are likely to introduce significant errors with the 32 bit float type used on th
 So a special method of splitting Julian days into an integer and fractional part is used
 to overcome that problem.
 
+Note! Because the algorithm is tailored specifically for 32 bit floats, other libraries may be more
+suitable for this purpose, if higher precision floating point formats are available.
+
 This adaptation introduces an object oriented interface, and a method of synchronizing the time
 to a time source in a standard UNIX epoch format. Thus it is easily usable with any Arduino user
 program.
